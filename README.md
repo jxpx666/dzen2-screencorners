@@ -11,7 +11,10 @@
 > Lines of `.dzen2-screencorners` containing the `nop` command will not be sourced. You also can delete any lines you want.
 
 2. `ENTERTITLE`, `LEAVETITLE`, `grabkeys` and `ungrabkeys`
-> Leave `tl*entertitle=grabkeys` and `tl*leavetitle=ungrabkeys`, e.g., if you want to use the Keyboard. If you want to execute another action on `entertitle` or `leavetitle` you can write something like: `tl*leavetitle=ungrabkeys,exec:xmessage $DISPLAY`.
+> Leave `*entertitle=grabkeys` and `*leavetitle=ungrabkeys` if you want to use the Keyboard. If you want to execute another action on `entertitle` or `leavetitle` you can write something like: `tl*leavetitle=ungrabkeys,exec:xmessage $DISPLAY`, e.g.
+
+3. MORE INFO
+> You can obtain more information about actions and keyboard response at `Dzen2` documentation. This is nothing more than 4 `dzen2` 1x1 px squares drawed at the corners of any screen.
 
 # OTHER THINGS...
 To control the dzen2-screencorners on my Blackbox Menu, I use a script like that:
