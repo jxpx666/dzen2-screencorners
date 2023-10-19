@@ -5,6 +5,13 @@
 3. Put the `dzen2-screencorners` into your autostart (.xprofile, .xsession, or .xinitrc). Something like: `( sleep 4 ; dzen2-screencorners & ) &`.
 4. Configure `.dzen2-screencorners` with your own preferences.
 
+# OBS.
+
+1. `NOP`
+> Lines of `.dzen2-screencorners` containing the `nop` command will not be sourced. You also can delete any lines you want.
+
+2. `ENTERTITLE`, `LEAVETITLE`, `grabkeys` and `ungrabkeys`
+> Leave `tl*entertitle=grabkeys` and `tl*leavetitle=ungrabkeys`, e.g., if you want to use the Keyboard. If you want to execute another action on `entertitle` or `leavetitle` you can write something like: `tl*leavetitle=ungrabkeys,exec:xmessage $DISPLAY`.
 
 # OTHER THINGS...
 To control the dzen2-screencorners on my Blackbox Menu, I use a script like that:
