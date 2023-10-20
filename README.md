@@ -16,6 +16,9 @@
 3. MORE INFO
 > You can obtain more information about actions and keyboard response at `Dzen2` documentation. This is nothing more than 4 `dzen2` 1x1 px squares drawed at the corners of any screen.
 
+4. SHEET LIST
+> You can obtain a "sheet list" to remember your configuration with this simple command-line: `xmessage "$(cat $HOME/.dzen2-screencorners|grep -e "tr\\*"|grep -e "nop" -v|sed 's/tl\*//g'|paste - -s -d "\n")"`. Still thinking if this must be included  in the original script as an option.
+
 # OTHER THINGS...
 To control the dzen2-screencorners on my Blackbox Menu, I use a script like that:
 
