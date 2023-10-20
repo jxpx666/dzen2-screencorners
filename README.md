@@ -14,10 +14,13 @@
 > Leave `*entertitle=grabkeys` and `*leavetitle=ungrabkeys` if you want to use the Keyboard. If you want to execute another action on `entertitle` or `leavetitle` you can write something like: `tl*leavetitle=ungrabkeys,exec:xmessage $DISPLAY`, e.g.
 
 3. MORE INFO
-> You can obtain more information about actions and keyboard response at `Dzen2` documentation. This is nothing more than 4 `dzen2` 1x1 px squares drawed at the corners of any screen.
+> You can obtain more information about actions and keyboard response at `Dzen2` documentation. This is nothing more than 4 `dzen2` 1x1 px squares drawed at the corners (geometries: +0+0, +0-1, -1+0, -1-1) of your screen.
 
 4. SHEET LIST
 > You can obtain a "sheet list" to remember your configuration with this simple command-line: `xmessage "$(cat $HOME/.dzen2-screencorners|grep -e "tr\\*"|grep -e "nop" -v|sed 's/tl\*//g'|paste - -s -d "\n")"`. Still thinking if this must be included  in the original script as an option.
+
+5. HACK
+> You can hack the script to draw `dzen2` at arbitrary geometries. The nice thing about `dzen2-screencorners` is: it's tottaly "Arbitrary". If you want to draw bigger than 1x1px squares of `dzen2`, you can use `xcompmgr` alongside `xorg-transset`, to make it transparent.
 
 # OTHER THINGS...
 To control the dzen2-screencorners on my Blackbox Menu, I use a script like that:
